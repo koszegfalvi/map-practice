@@ -149,3 +149,96 @@ ovodaiJelek.put("Zámbó Jimmy", "korona");
 Adj még hozzá legalább 2 kulcs-érték párt!
 Ezeket a párokat Entry-nek hívjuk.
 
+Vegyél fel egy olyan entry-t is, ahol
+a kulcs különböző, ám az érték már szerepel az értékek közt!
+
+Vegyél fel egy olyan entry-t, ahol már
+szereplő kulcsot adsz meg! Mi történik ilyenkor?
+Az eredeti érték marad vagy felülíródik vagy összefűzödik?
+
+Írasd ki a maped-et! `System.out.println(ovodaiJelek);`
+Milyen sorrenben írja ki az elemeket?
+
+Távoltísd el a kulcs alapján 
+az egyik kulcs-érték párt a `remove()` metódussal!
+
+<details><summary>Megoldás</summary><pre>
+`ovodaiJelek.remove("Zámbó Jimmy");`
+</pre></details>
+
+Kérd le a `.get()` metódussal az egyik kulcshoz tartozó 
+értéket és írasd ki!
+
+<details><summary>Megoldás</summary><pre>
+System.out.println(ovodaiJelek.get("Zámbó Jimmy")); // korona
+</pre></details>
+
+Írd ki az összes kulcsot a `.keySet()`-tel!
+<details><summary>Megoldás</summary><pre>
+System.out.println(ovodaiJelek.keySet());
+</pre></details>
+
+Tedd meg ugyanezt az értékekre, keresd meg, melyik
+metódus használható erre!
+<details><summary>Megoldás</summary><pre>
+System.out.println(ovodaiJelek.values());
+</pre></details>
+
+Nézd meg az .entrySet() metódust, mivel tér vissza?
+(Hívd meg a mapeden és vidd rá a kurzort, olvasd el a
+fejlécét és a leírását!)
+<details><summary>Megoldás</summary><pre>
+Mily' meglepő, Set-tel tér vissza, amiben
+a kulcs-érték párokból képzett Entry-ket tároljuk
+</pre></details>
+
+Vizsgáld meg mi a különbség aközött, 
+ha csak a maped írod ki,
+és ha a map `entrySet()`-jét!
+<details><summary>Megoldás</summary><pre>
+Kiíráskor nagyon minimális különbséget látunk,
+a kapcsoszárójel helyett szögletes a zárójel, ám
+itt a háttérben az történik, hogy más az adatstruktúra,
+amit kiíratunk: első esetben Map, második esetben Set!
+</pre></details>
+
+Mi történik, ha nem létező kulcsot adsz meg paraméterül
+a `.get()` metódusnak?
+<details><summary>Megoldás</summary><pre>
+null-t ad vissza
+</pre></details>
+
+Hogyan oldanád meg, hogy kicseréld a saját 
+óvodai jeledet egy másikra?
+
+## 2.b Vissza a tesiórára!
+Írj egy mapet, ami testmagasságaokat tart számon!
+Add hozzá az alábbi értékeket:
+
+```
+heightMap.put("Sziproka", 131);
+heightMap.put("Csuporka", 134);
+heightMap.put("Puszedli", 123);
+heightMap.put("X-Professzor", 185);
+heightMap.put("Mohó Jojó", 152);
+```
+
+Írasd ki az összes testmagasságot! (A neveket NE!)
+
+Írd ki, mekkora a legnagyobb testmagasság!
+<details><summary>Segítség</summary><p>
+A values()-on kell végigiterálni, érdemes
+foreach ciklust használnod!
+</p></details>
+
+<details><summary>Még több segítség</summary><pre>
+A foreach ciklus fejléce:
+for (int height : heightMap.values())
+</pre></details>
+
+A segédváltozódnak semmiképp se adj meg alapértéknek
+0-t, de azt se csináld, hogy lekéred egy konkrét kulcs 
+értékét!
+Ehelyett használd ezt:
+`int maxHeight = Integer.MIN_VALUE;` 
+
