@@ -289,7 +289,7 @@ heightMap.put("Sziporka", heightMap.get("Sziporka") + 1);
 // Készíts egy int newHeight változót...!
 </code></details>
 
-### Vissza az iskolapadba!
+### 2.c Vissza az iskolapadba!
 Készítsünk el egy jegyeket eltároló mapet `grades` néven, 
 ami minden tanulóhoz
 hozzátársít egy listát, amiben a jegyei szerepelnek!
@@ -317,6 +317,7 @@ grades.put("Bob", Arrays.asList(4, 3));
 
 Vegyél fel jegyeket egy harmadik, Charlie nevű diáknak is!
 
+**_TO BE CONTINUED..._**
 
 #### Szorgalmi: Félévi átlag
 Készíts egy olyan mapet, ami egy névhez társít egy darab jegyet,
