@@ -238,7 +238,39 @@ for (int height : heightMap.values())
 
 A segédváltozódnak semmiképp se adj meg alapértéknek
 0-t, de azt se csináld, hogy lekéred egy konkrét kulcs 
-értékét!
+értékét és azt állítod be neki!
 Ehelyett használd ezt:
 `int maxHeight = Integer.MIN_VALUE;` 
 
+Írd ki, ki a legmagasabb!
+_Ez már sokkal csúnyább megoldás lesz :)_
+<details><summary>Segítség</summary><p>
+Ugyanúgy meg kell keresned a legnagyobb magasságot,
+majd eltárolnod a hozzá tartozó kulcsot!
+Ez hasonló ahhoz, mint amikor a tömbön való végigiteráláskor
+eltároluk az indexet és az indexen lévő értéket is!
+Azaz vegyél fel egy segédváltozót a névnek!
+</p></details>
+
+Mi lesz most a kollekció, amin végig kell iterálnod,
+hogy fog kinézni a foreach ciklus?
+<details><summary>Segítség</summary><p>
+Az .entrySet()-en kell végigmenni!
+</p></details>
+
+**TRÜKK!** Írd be IntelliJ-be, hogy `heightMap.entrySet()`,
+majd nyomj egy Alt+Entert! Válaszd azt az opciót, hogy
+`Iterate over...` és voilá! Automatikusan kitöltötte
+neked a foreach fejlécét! Igen, csúnya!:)
+Érdemes átírni az automatikusan generált "aktuális elem"
+változójának a nevét `stringIntegerEntry`-ről akár csak sima
+`entry`-re! Ezen a `Map.Entry` típusú változón fogsz tudni
+hívni `.getKey()` és `.getValue()` metódusokat!
+
+<details><summary>Segítség</summary><code>
+for (Map.Entry< String, Integer> entry : heightMap.entrySet()) {
+    // TODO    
+    System.out.println(entry.getKey());
+    System.out.println(entry.getValue());
+}
+</code></details>
