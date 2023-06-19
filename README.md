@@ -135,16 +135,16 @@ Mapben: Map < String, String > dictionary;
 Készítsd egy map-et, ami a barátaidnak a régi
 óvodai jeleit tárolja el!
 
-<details><summary>Megoldás</summary><code>
+<details><summary>Megoldás</summary><pre>
 Map< String, String> ovodaiJelek = new HashMap<>();
-</code></details>
+</pre></details>
 
 Töltsd fel a saját neveddel és jeleddel!
 Ehhez használd a `.put()` metódust!
 
-<details><summary>Megoldás</summary><code>
+<details><summary>Megoldás</summary><pre>
 ovodaiJelek.put("Zámbó Jimmy", "korona");
-</code></details>
+</pre></details>
 
 Adj még hozzá legalább 2 kulcs-érték párt!
 Ezeket a párokat Entry-nek hívjuk.
