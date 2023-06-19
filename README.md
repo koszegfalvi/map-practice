@@ -274,3 +274,57 @@ for (Map.Entry< String, Integer> entry : heightMap.entrySet()) {
     System.out.println(entry.getValue());
 }
 </code></details>
+
+Írd ki, ki a legalacsonyabb és mennyi a magassága!
+
+Sziporka kiállt az esőbe és nőtt 1 centit:
+növeld meg a magasságát 1-gyel!
+(**Ne** a `put()`-ot írd át!) 
+Nem kell túlbonyolítani, 1-2 sor összesen!
+
+
+<details><summary>Megoldás egy sorban</summary><code>
+heightMap.put("Sziporka", heightMap.get("Sziporka") + 1);
+// Ha nem tudtad magadtól megoldani, írd át ezt a megoldást 2 sorba!
+// Készíts egy int newHeight változót...!
+</code></details>
+
+### Vissza az iskolapadba!
+Készítsünk el egy jegyeket eltároló mapet `grades` néven, 
+ami minden tanulóhoz
+hozzátársít egy listát, amiben a jegyei szerepelnek!
+
+Így tudod feltölteni elemekkel:
+
+```
+List<Integer> aliceGrades = new ArrayList<>();
+aliceGrades.add(5);
+aliceGrades.add(2);
+aliceGrades.add(1);
+grades.put("Alice", aliceGrades);
+
+List<Integer> bobGrades = new ArrayList<>();
+bobGrades.add(4);
+bobGrades.add(3);
+grades.put("Bob", bobGrades);
+```
+VAGY sokkal tömörebben:
+
+```
+grades.put("Alice", Arrays.asList(5, 2, 1));
+grades.put("Bob", Arrays.asList(4, 3));
+```
+
+Vegyél fel jegyeket egy harmadik, Charlie nevű diáknak is!
+
+
+#### Szorgalmi: Félévi átlag
+Készíts egy olyan mapet, ami egy névhez társít egy darab jegyet,
+ez a jegy lesz a tanuló félév végi jegye matekból.
+Készítsd még ilyen mapeket töriből, irodalomból és kémiából.
+
+Ezen mapek alapján fűzz össze egy olyan mapet, ami tartalmazza
+a tanuló minden egyes tantárgyból kapott félév végi jegyét!
+Tehát ha Julika 1-est kapott matekból, 3-ast kémiából és matekból
+és 4-est irodalomból, akkor hozzá ez a négy szám (1, 3, 3, 4) 
+tartozzon az új mapben! (A sorrend nem számít!)
